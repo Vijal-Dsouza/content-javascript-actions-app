@@ -4,7 +4,9 @@ jobs:
   hello_world_job: 
     runs-on: ubuntu-latest
     name: Hello World Job 
-    steps:  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Hello World Action 
         id: hello-world
         uses: ./
