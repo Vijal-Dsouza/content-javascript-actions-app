@@ -1,0 +1,14 @@
+on: [push] 
+
+jobs: 
+  hello_world_job: 
+    runs-on: ubuntu-latest
+    name: Hello World Job 
+    steps:  
+      - name: Hello World Action 
+        id: hello-world
+        uses: ./
+        with: 
+          who-to-greet: 'Vijal Dsouza' 
+      - name: Get the time we greeted you 
+        run: echo "The time we greeted you was ${{ steps.hello-world.outputs.time }}"
