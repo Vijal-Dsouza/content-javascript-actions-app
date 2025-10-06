@@ -6,7 +6,7 @@ jobs:
     name: Hello World Job 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v2
       - name: Hello World Action 
         id: hello-world
         uses: ./
